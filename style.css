@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#cb{
+	margin: 200px auto;
+	height: 900px;
+	width: 900px;
+	/*border: 5px solid black;*/
+}
+
+.ten{
+	height: 300px;
+	width: 300px;
+	/*border: 5px solid black;*/
+
+	float: left;
+	background-image: url(ten.png);
+	background-size: 100% 100%;
+}
+
+.ten::hover{
+	background-image: url(black.png);
+}
+
+.ten::after{
+	display: block;
+	content: "";
+	clear: both;
+}

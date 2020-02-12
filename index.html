@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>井字棋</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		window.onload = () => {
+			window.s = true;
+			var ten = document.getElementsByClassName("ten")[0];
+			for (var i = 1; i < 3*3; i++) {
+				document.getElementById("cb").appendChild(ten.cloneNode(true));
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="cb">
+		<div class="ten" onclick="drop(this)"></div>
+	</div>
+	<script type="text/javascript">
+		function drop(point){
+			if(window.s){
+				point.setAttribute('style','background-image: url(black.png)');
+				window.s = false;
+			}else{
+				point.setAttribute('style','background-image: url(white.png)');
+				window.s = true;
+			}
+		}</script>
+</body>
+</html>
